@@ -26,24 +26,27 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 2,
-    elevation: 3
+    elevation: 3,
   },
   topContainer: {
     flexDirection: 'row',
-    height: height * 0.4,
+    height: height * 0.3,
+    backgroundColor: 'orange',
+  },
+  imageWrapper: {
+    width: 190,
     justifyContent: 'flex-end',
-    backgroundColor: "orange"
   },
   cover: {
-    width: width * 0.4,
-    height: '100%',
+    width: '100%',
+    aspectRatio: 1,
     resizeMode: 'contain',
     alignSelf: 'flex-end',
   },
   textContainer: {
     flex: 1,
     marginLeft: 10,
-    backgroundColor: "green"
+    backgroundColor: 'green',
   },
 });
 

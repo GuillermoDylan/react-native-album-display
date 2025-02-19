@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     flexDirection: "column",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    backgroundColor: 'green'
   },
   albumTitle: {
     fontSize: 25,
