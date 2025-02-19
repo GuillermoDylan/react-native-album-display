@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 
 const { width, height } = Dimensions.get('window');
 
+const imgMaxSize = 190;
+
 const AlbumDetails = ({ album }) => {
+  const [imageStyle, setImageStyle] = useState({ width: '100%', height: imgMaxSize });
+
+  useEffect(() => {
+    Image.getSize(album.coverUrl, (imgWidth, imgHeight) => {
+      if (imgHeight > imgWidth) {
+        setImageStyle({ width: imgMaxSize, height: '100%' });
+      } else {
+        setImageStyle({ width: '100%', height: imgMaxSize });
+      }
+    });
+  }, [album.coverUrl]);
+
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <View style={styles.imageWrapper}>
-          <Image source={{ uri: album.coverUrl }} style={styles.cover} />
+          <Image source={{ uri: album.coverUrl }} style={[styles.cover, imageStyle]} />
         </View>
         <AlbumBasicData style={styles.textContainer} album={album} />
       </View>
@@ -30,23 +44,21 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
-    height: height * 0.3,
-    backgroundColor: 'orange',
+    height: imgMaxSize,
+    backgroundColor: "orange"
   },
   imageWrapper: {
     width: 190,
+    height: '100%',
     justifyContent: 'flex-end',
   },
   cover: {
-    width: '100%',
-    aspectRatio: 1,
     resizeMode: 'contain',
     alignSelf: 'flex-end',
   },
   textContainer: {
     flex: 1,
     marginLeft: 10,
-    backgroundColor: 'green',
   },
 });
 
