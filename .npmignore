@@ -1,0 +1,9 @@
+.gitignore
+App.js
+index.js
+app.json
+sampleData/
+node_modules/
+.expo/
+dist/
+.git/

@@ -1,7 +1,7 @@
 import { Button, StyleSheet, SafeAreaView } from 'react-native';
-import CoverGroup from './components/CoverGroup';
 import albums from './sampleData/albums.json'
 import React from 'react';
+import CoverGroup from 'react-native-album-display/components/CoverGroup';
 
 
 export default function App() {
