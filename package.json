@@ -1,7 +1,7 @@
 {
   "name": "react-native-album-display",
   "description": "A simple album display component for React Native",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "email": "guille@carvajal.es",
