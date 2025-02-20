@@ -1,21 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import CoverComponent from './components/CoverComponent';
+import { Button, StyleSheet, SafeAreaView } from 'react-native';
 import CoverGroup from './components/CoverGroup';
-
 import albums from './sampleData/albums.json'
+import React from 'react';
 
-import AlbumDetails from './components/AlbumDetails';
 
 export default function App() {
+  const [listView, setListView] = React.useState(false);
 
   return (
-    <View style={styles.container}>
-      <CoverGroup albums={albums} isListView={false} />
-    </View>
-    /*<View style={styles.container}>
-      <AlbumDetails album={albums.at(0)}/>
-    </View>*/
+    <SafeAreaView style={styles.container}>
+      <Button onPress={() => setListView(!listView)} title="Change view" />
+      <CoverGroup albums={albums} isListView={listView} />
+    </SafeAreaView>
   );
 }
 

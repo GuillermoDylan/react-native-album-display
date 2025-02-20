@@ -4,6 +4,7 @@ import { Divider } from '@rneui/themed';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
 import RatesStatistics from './albumDetailsSubcomponents/RatesStatistics';
+import FadeInView from './animations/FadeInView';
 
 const { width, height } = Dimensions.get('window');
 
@@ -41,9 +42,19 @@ const AlbumDetails = ({ album, close }) => {
     <View style={styles.container}>
       <Button onPress={close} title="Close" style={styles.closeButton} />
       <Animated.View style={[styles.topContainer, { height: topContainerHeight }]}>
-        <Image source={{ uri: album.coverUrl }} style={styles.backgroundImage} blurRadius={10} />
+        {album.coverUrl ?
+          <Image source={{ uri: album.coverUrl }} style={styles.backgroundImage} blurRadius={10} />
+          :
+          <FadeInView>
+            <Image source={{ uri: album.coverUrl }} style={styles.backgroundImage} blurRadius={10} />
+          </FadeInView>
+        }
         <Animated.View style={[styles.imageWrapper, { flex: imageWrapperFlex }]}>
-          <Image source={{ uri: album.coverUrl }} style={styles.cover} />
+          {album.coverUrl ? <Image source={{ uri: album.coverUrl }} style={styles.cover} /> :
+            <FadeInView>
+              <Image source={{ uri: album.coverUrl }} style={styles.cover} />
+            </FadeInView>
+          }
         </Animated.View>
         <Animated.View style={[styles.textContainer, { transform: [{ scale: textScale }] }]}>
           <AlbumBasicData album={album} />
@@ -75,6 +86,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '100%',
     borderRadius: 10,
+    // Yo quitaría este backgroundColor para que el usuario pueda poner el suyo
     backgroundColor: '#1c1c1c'
   },
   topContainer: {

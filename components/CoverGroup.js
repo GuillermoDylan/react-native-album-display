@@ -11,10 +11,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-    },
-    scrollViewList: {
-        flexDirection: 'column',
-    },
+    }
 });
 
 const CoverGroup = ({ albums, isListView }) => {
@@ -26,7 +23,7 @@ const CoverGroup = ({ albums, isListView }) => {
         <SafeAreaView style={styles.container}>
             {openModal == false ? (
                 <ScrollView
-                    contentContainerStyle={isListView ? styles.scrollViewList : styles.scrollView}
+                    contentContainerStyle={styles.scrollView}
                     horizontal={isListView}>
                     {albums.map((album, index) => (
                         <View key={index}>
