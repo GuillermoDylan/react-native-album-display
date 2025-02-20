@@ -1,7 +1,7 @@
 {
   "name": "react-native-album-display",
   "description": "A simple album display component for React Native",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     {
       "email": "guille@carvajal.es",
@@ -11,7 +11,7 @@
       "name": "Diego Moragón Merallo"
     }
   ],
-  "main": "src/index.js",
+  "main": "components/index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -26,7 +26,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.7",
-    "react-native-album-display": "^1.0.0",
+    "react-native-album-display": "^1.0.1",
     "react-native-chart-kit": "^6.12.0",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-star-rating-widget": "^1.9.2",

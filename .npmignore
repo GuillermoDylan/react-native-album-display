@@ -1,6 +1,6 @@
 .gitignore
 App.js
-index.js
+./index.js
 app.json
 sampleData/
 node_modules/
