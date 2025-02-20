@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { View, Image, StyleSheet, Dimensions, Animated } from 'react-native';
+import { View, Image, StyleSheet, Dimensions, Animated, Button } from 'react-native';
 import { Divider } from '@rneui/themed';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
@@ -7,8 +7,8 @@ import RatesStatistics from './albumDetailsSubcomponents/RatesStatistics';
 
 const { width, height } = Dimensions.get('window');
 
-const AlbumDetails = ({ album }) => {
-  
+const AlbumDetails = ({ album, close }) => {
+
   const scrollY = useMemo(() => new Animated.Value(0), []);
   const [ratings, setRatings] = useState(album.ratings || []);
 
@@ -39,12 +39,13 @@ const AlbumDetails = ({ album }) => {
 
   return (
     <View style={styles.container}>
-      <Animated.View style={[styles.topContainer, { height: topContainerHeight }]}> 
+      <Button onPress={close} title="Close" style={styles.closeButton} />
+      <Animated.View style={[styles.topContainer, { height: topContainerHeight }]}>
         <Image source={{ uri: album.coverUrl }} style={styles.backgroundImage} blurRadius={10} />
-        <Animated.View style={[styles.imageWrapper, { flex: imageWrapperFlex }]}> 
+        <Animated.View style={[styles.imageWrapper, { flex: imageWrapperFlex }]}>
           <Image source={{ uri: album.coverUrl }} style={styles.cover} />
         </Animated.View>
-        <Animated.View style={[styles.textContainer, { transform: [{ scale: textScale }] }]}> 
+        <Animated.View style={[styles.textContainer, { transform: [{ scale: textScale }] }]}>
           <AlbumBasicData album={album} />
         </Animated.View>
       </Animated.View>
@@ -62,6 +63,7 @@ const AlbumDetails = ({ album }) => {
         onScroll={Animated.event([
           { nativeEvent: { contentOffset: { y: scrollY } } }
         ], { useNativeDriver: false })}
+        scrollEventThrottle={16}
       />
     </View>
   );
@@ -101,6 +103,11 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     justifyContent: 'center',
+  },
+  closeButton: {
+    position: 'absolute',
+    top: 10,
+    right: 10,
   }
 });
 

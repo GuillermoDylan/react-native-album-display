@@ -35,7 +35,7 @@ const FadeInView = (props) => {
     );
 };
 
-const CoverComponent = ({ imageUrl, onPress }) => {
+const CoverComponent = ({ album, onPress }) => {
     const [scaleAnim] = useState(new Animated.Value(1));
 
     const handlePressIn = () => {
@@ -60,18 +60,17 @@ const CoverComponent = ({ imageUrl, onPress }) => {
             onPressOut={handlePressOut}
             onMouseEnter={handlePressIn}
             onMouseLeave={handlePressOut}
-            disabled={!imageUrl}
+            disabled={!album?.coverUrl}
         >
-            {imageUrl ? (
+            {album?.coverUrl ? (
                 <Animated.Image
-                    source={{ uri: imageUrl }}
+                    source={{ uri: album.coverUrl }}
                     style={[styles.image, { transform: [{ scale: scaleAnim }] }]}
                     resizeMode="cover"
                 />
             ) : (
                 <FadeInView>
                     <Animated.Image
-                        source={{ uri: imageUrl }}
                         style={[styles.image, { transform: [{ scale: scaleAnim }] }]}
                         resizeMode="cover"
                     />

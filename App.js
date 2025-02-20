@@ -9,20 +9,13 @@ import AlbumDetails from './components/AlbumDetails';
 
 export default function App() {
 
-  const items = albums.map((album) => ({
-    ...album,
-    onPress: () => { },
-  }));
-
-
   return (
-    /*<View style={styles.container}>
-      <Text>Covers</Text>
-      <CoverGroup albums={items} isListView={false} />
-    </View>*/
     <View style={styles.container}>
-      <AlbumDetails album={albums.at(0)}/>
+      <CoverGroup albums={albums} isListView={false} />
     </View>
+    /*<View style={styles.container}>
+      <AlbumDetails album={albums.at(0)}/>
+    </View>*/
   );
 }
 
