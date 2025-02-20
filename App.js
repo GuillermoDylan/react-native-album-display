@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <AlbumDetails album={{ coverUrl: 'https://placehold.co/400x400.png', title: 'Thriller', artist: 'Michael Jackson' }} />
+      <AlbumDetails album={{ coverUrl: 'https://m.media-amazon.com/images/I/91VnI1TRpxL.jpg', title: 'Thriller', artist: 'Michael Jackson' }} />
     </View>
   );
 }
