@@ -6,32 +6,12 @@ import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
 import RatesStatistics from './albumDetailsSubcomponents/RatesStatistics';
 
-const { height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const AlbumDetails = ({ album }) => {
-  const [rating, setRating] = useState(0);
-  const scaleAnim = useMemo(() => new Animated.Value(1), []);
+  
   const scrollY = useMemo(() => new Animated.Value(0), []);
-
-  const animateRating = () => {
-    Animated.sequence([
-      Animated.timing(scaleAnim, {
-        toValue: 1.2,
-        duration: 150,
-        useNativeDriver: true,
-      }),
-      Animated.timing(scaleAnim, {
-        toValue: 1,
-        duration: 150,
-        useNativeDriver: true,
-      })
-    ]).start();
-  };
-
-  const handleRatingChange = (newRating) => {
-    setRating(newRating);
-    animateRating();
-  };
+  const [ratings, setRatings] = useState([5, 4.5, 3, 4, 2.5, 5, 4, 3.5, 4.5, 2, 1, 3, 5, 4.5, 4, 0.5]);
 
   const sampleTracks = [
     { name: "Track One", duration: "3:45" },
@@ -40,8 +20,6 @@ const AlbumDetails = ({ album }) => {
     { name: "Track Four", duration: "5:03" },
     { name: "Track Five", duration: "3:30" },
   ];
-  
-  const ratingsData = [5, 4.5, 3, 4, 2.5, 5, 4, 3.5, 4.5, 2, 1, 3, 5, 4.5, 4, 0.5];
 
   const initialTopContainerHeight = height * 0.4;
   const compressedTopContainerHeight = height * 0.1;
@@ -80,17 +58,7 @@ const AlbumDetails = ({ album }) => {
         renderItem={() => (
           <View>
             <Divider style={{ marginVertical: 10 }} />
-            <View style={styles.ratingContainer}>
-              <StarRating
-                rating={rating}
-                onChange={handleRatingChange}
-                starSize={45}
-              />
-              <Animated.View style={[styles.ratingValueWrapper, { transform: [{ scale: scaleAnim }] }]}> 
-                <Text style={styles.ratingValueNum}>{rating}</Text>
-              </Animated.View>
-            </View>
-            <RatesStatistics ratings={ratingsData} />
+            <RatesStatistics ratings={ratings} setRatings={setRatings} />
             <Divider style={{ marginVertical: 10 }} />
             <AlbumTracklist tracks={sampleTracks} />
           </View>
@@ -119,7 +87,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     position: 'absolute',
-    width: '100%',
+    width: width,
     height: '100%',
     resizeMode: 'cover',
     opacity: 0.3,
@@ -132,27 +100,11 @@ const styles = StyleSheet.create({
     width: '100%',
     aspectRatio: 1,
     resizeMode: 'contain',
+    borderRadius: 10
   },
   textContainer: {
     flex: 1,
     justifyContent: 'center',
-  },
-  ratingContainer: {
-    flexDirection: 'row',
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  },
-  ratingValueWrapper: {
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "yellow",
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-  },
-  ratingValueNum: {
-    fontSize: 21,
-    fontWeight: "bold",
   }
 });
 
