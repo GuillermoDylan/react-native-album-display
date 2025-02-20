@@ -1,16 +1,13 @@
-import { Button, StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, Platform } from 'react-native';
 import albums from './sampleData/albums.json'
 import React from 'react';
 import CoverGroup from './components/CoverGroup';
 
 
 export default function App() {
-  const [listView, setListView] = React.useState(false);
-
   return (
     <SafeAreaView style={styles.container}>
-      <Button onPress={() => setListView(!listView)} title="Change view" />
-      <CoverGroup albums={albums} isListView={listView} />
+      <CoverGroup albums={albums} />
     </SafeAreaView>
   );
 }
@@ -18,8 +15,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#1c1c1c',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: Platform.OS === 'android' ? 40 : 0
   },
 });

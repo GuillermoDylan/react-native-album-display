@@ -9,7 +9,7 @@ const AlbumBasicData = ({ album }) => {
   return (
     <View style={styles.container}>
       <Text style={[styles.albumTitle, { fontSize: getFontSize(album.title, 25) }]}>{album.title}</Text>
-      <Text style={[styles.artist, , { fontSize: getFontSize(album.artist, 25) }]}>{album.artist}</Text>
+      <Text style={[styles.artist, , { fontSize: getFontSize(album.artist, 17) }]}>{album.artist}</Text>
     </View>
   );
 };
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
   artist: {
     fontSize: 17,
     color: '#fa586a',
-    textDecorationLine: 'underline',
   },
 });
 

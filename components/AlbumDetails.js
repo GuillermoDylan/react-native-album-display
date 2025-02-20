@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { View, Image, StyleSheet, Dimensions, Animated, Button } from 'react-native';
+import { SafeAreaView, View, Image, StyleSheet, Dimensions, Animated, Button, BackHandler } from 'react-native';
 import { Divider } from '@rneui/themed';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
@@ -16,6 +16,17 @@ const AlbumDetails = ({ album, close }) => {
   useEffect(() => {
     setRatings(album.ratings || []); // Reinicia las calificaciones cuando cambia el álbum
   }, [album]);
+
+  useEffect(() => {
+    const backAction = () => {
+      close(); // Cierra el modal cuando se presiona "atrás"
+      return true; // Evita el comportamiento por defecto de Android
+    };
+
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    return () => backHandler.remove(); // Limpia el event listener al desmontar
+  }, []);
 
   const initialTopContainerHeight = height * 0.4;
   const compressedTopContainerHeight = height * 0.1;
@@ -39,7 +50,7 @@ const AlbumDetails = ({ album, close }) => {
   });
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Button onPress={close} title="Close" style={styles.closeButton} />
       <Animated.View style={[styles.topContainer, { height: topContainerHeight }]}>
         {album.coverUrl ?
@@ -76,18 +87,15 @@ const AlbumDetails = ({ album, close }) => {
         ], { useNativeDriver: false })}
         scrollEventThrottle={16}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
     width: '100%',
     borderRadius: 10,
-    // Yo quitaría este backgroundColor para que el usuario pueda poner el suyo
-    backgroundColor: '#1c1c1c'
   },
   topContainer: {
     flexDirection: 'row',
