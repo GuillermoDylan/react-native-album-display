@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, SafeAreaView, Platform, StatusBar, ScrollView } from 'react-native';
+import { View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import CoverComponent from './CoverComponent';
 
 const styles = StyleSheet.create({

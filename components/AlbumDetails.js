@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, Animated, FlatList } from 'react-native';
+import { View, Image, StyleSheet, Dimensions, Animated } from 'react-native';
 import { Divider } from '@rneui/themed';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
