@@ -33,7 +33,7 @@ const AlbumDetails = ({ album, close }) => {
 
   const textScale = scrollY.interpolate({
     inputRange: [0, initialTopContainerHeight - compressedTopContainerHeight],
-    outputRange: [1, 0.6],
+    outputRange: [1, 0.8],
     extrapolate: 'clamp',
   });
 
