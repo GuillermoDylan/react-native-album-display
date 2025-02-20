@@ -4,214 +4,813 @@
         "title": "Red (Taylor's Version)",
         "artist": "Taylor Swift",
         "tracklist": [
-            { "name": "State of Grace (Taylor's Version)", "duration": "4:55" },
-            { "name": "Red (Taylor's Version)", "duration": "3:43" },
-            { "name": "Treacherous (Taylor's Version)", "duration": "4:02" },
-            { "name": "I Knew You Were Trouble (Taylor's Version)", "duration": "3:39" },
-            { "name": "All Too Well (Taylor's Version)", "duration": "5:29" },
-            { "name": "22 (Taylor's Version)", "duration": "3:50" },
-            { "name": "I Almost Do (Taylor's Version)", "duration": "4:04" },
-            { "name": "We Are Never Ever Getting Back Together (Taylor's Version)", "duration": "3:13" },
-            { "name": "Stay Stay Stay (Taylor's Version)", "duration": "3:25" },
-            { "name": "The Last Time (Taylor's Version)", "duration": "4:59" },
-            { "name": "Holy Ground (Taylor's Version)", "duration": "3:22" },
-            { "name": "Sad Beautiful Tragic (Taylor's Version)", "duration": "4:44" },
-            { "name": "The Lucky One (Taylor's Version)", "duration": "4:00" },
-            { "name": "Everything Has Changed (Taylor's Version)", "duration": "4:05" },
-            { "name": "Starlight (Taylor's Version)", "duration": "3:40" },
-            { "name": "Begin Again (Taylor's Version)", "duration": "3:58" },
-            { "name": "The Moment I Knew (Taylor's Version)", "duration": "4:45" },
-            { "name": "Come Back... Be Here (Taylor's Version)", "duration": "3:43" },
-            { "name": "Girl at Home (Taylor's Version)", "duration": "3:40" },
-            { "name": "State of Grace (acoustic version) (Taylor's Version)", "duration": "5:21" },
-            { "name": "Ronan (Taylor's Version)", "duration": "4:24" },
-            { "name": "Better Man (Taylor's Version) (From The Vault)", "duration": "4:57" },
-            { "name": "Nothing New (Taylor's Version) (From The Vault)", "duration": "4:18" },
-            { "name": "Babe (Taylor's Version) (From The Vault)", "duration": "3:44" },
-            { "name": "Message in a Bottle (Taylor's Version) (From The Vault)", "duration": "3:45" },
-            { "name": "I Bet You Think About Me (Taylor's Version) (From The Vault)", "duration": "4:45" },
-            { "name": "Forever Winter (Taylor's Version) (From The Vault)", "duration": "4:23" },
-            { "name": "Run (Taylor's Version) (From The Vault)", "duration": "4:00" },
-            { "name": "The Very First Night (Taylor's Version) (From The Vault)", "duration": "3:20" },
-            { "name": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)", "duration": "10:13" }
+            {
+                "name": "State of Grace (Taylor's Version)",
+                "duration": "4:55"
+            },
+            {
+                "name": "Red (Taylor's Version)",
+                "duration": "3:43"
+            },
+            {
+                "name": "Treacherous (Taylor's Version)",
+                "duration": "4:02"
+            },
+            {
+                "name": "I Knew You Were Trouble (Taylor's Version)",
+                "duration": "3:39"
+            },
+            {
+                "name": "All Too Well (Taylor's Version)",
+                "duration": "5:29"
+            },
+            {
+                "name": "22 (Taylor's Version)",
+                "duration": "3:50"
+            },
+            {
+                "name": "I Almost Do (Taylor's Version)",
+                "duration": "4:04"
+            },
+            {
+                "name": "We Are Never Ever Getting Back Together (Taylor's Version)",
+                "duration": "3:13"
+            },
+            {
+                "name": "Stay Stay Stay (Taylor's Version)",
+                "duration": "3:25"
+            },
+            {
+                "name": "The Last Time (Taylor's Version)",
+                "duration": "4:59"
+            },
+            {
+                "name": "Holy Ground (Taylor's Version)",
+                "duration": "3:22"
+            },
+            {
+                "name": "Sad Beautiful Tragic (Taylor's Version)",
+                "duration": "4:44"
+            },
+            {
+                "name": "The Lucky One (Taylor's Version)",
+                "duration": "4:00"
+            },
+            {
+                "name": "Everything Has Changed (Taylor's Version)",
+                "duration": "4:05"
+            },
+            {
+                "name": "Starlight (Taylor's Version)",
+                "duration": "3:40"
+            },
+            {
+                "name": "Begin Again (Taylor's Version)",
+                "duration": "3:58"
+            },
+            {
+                "name": "The Moment I Knew (Taylor's Version)",
+                "duration": "4:45"
+            },
+            {
+                "name": "Come Back... Be Here (Taylor's Version)",
+                "duration": "3:43"
+            },
+            {
+                "name": "Girl at Home (Taylor's Version)",
+                "duration": "3:40"
+            },
+            {
+                "name": "State of Grace (acoustic version) (Taylor's Version)",
+                "duration": "5:21"
+            },
+            {
+                "name": "Ronan (Taylor's Version)",
+                "duration": "4:24"
+            },
+            {
+                "name": "Better Man (Taylor's Version) (From The Vault)",
+                "duration": "4:57"
+            },
+            {
+                "name": "Nothing New (Taylor's Version) (From The Vault)",
+                "duration": "4:18"
+            },
+            {
+                "name": "Babe (Taylor's Version) (From The Vault)",
+                "duration": "3:44"
+            },
+            {
+                "name": "Message in a Bottle (Taylor's Version) (From The Vault)",
+                "duration": "3:45"
+            },
+            {
+                "name": "I Bet You Think About Me (Taylor's Version) (From The Vault)",
+                "duration": "4:45"
+            },
+            {
+                "name": "Forever Winter (Taylor's Version) (From The Vault)",
+                "duration": "4:23"
+            },
+            {
+                "name": "Run (Taylor's Version) (From The Vault)",
+                "duration": "4:00"
+            },
+            {
+                "name": "The Very First Night (Taylor's Version) (From The Vault)",
+                "duration": "3:20"
+            },
+            {
+                "name": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)",
+                "duration": "10:13"
+            }
         ],
-        "ratings": [0, 1.5, 3, 4.5, 2, 5, 3.5, 2.5, 4, 1, 0.5, 3, 5, 4.5, 2, 1, 3.5, 0]          
+        "ratings": [
+            0,
+            1.5,
+            3,
+            4.5,
+            2,
+            5,
+            3.5,
+            2.5,
+            4,
+            1,
+            0.5,
+            3,
+            5,
+            4.5,
+            2,
+            1,
+            3.5,
+            0
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/71dtYuD2+-L._UF894,1000_QL80_.jpg",
         "title": "HIT ME HARD AND SOFT",
         "artist": "Billie Eilish",
         "tracklist": [
-            { "name": "SKINNY", "duration": "3:39" },
-            { "name": "LUNCH", "duration": "2:59" },
-            { "name": "CHIHIRO", "duration": "5:03" },
-            { "name": "BIRDS OF A FEATHER", "duration": "3:30" },
-            { "name": "WILDFLOWER", "duration": "4:21" },
-            { "name": "THE GREATEST", "duration": "4:53" },
-            { "name": "L'AMOUR DE MA VIE", "duration": "5:33" },
-            { "name": "THE DINER", "duration": "3:06" },
-            { "name": "BITTERSUITE", "duration": "4:58" },
-            { "name": "BLUE", "duration": "5:43" }
+            {
+                "name": "SKINNY",
+                "duration": "3:39"
+            },
+            {
+                "name": "LUNCH",
+                "duration": "2:59"
+            },
+            {
+                "name": "CHIHIRO",
+                "duration": "5:03"
+            },
+            {
+                "name": "BIRDS OF A FEATHER",
+                "duration": "3:30"
+            },
+            {
+                "name": "WILDFLOWER",
+                "duration": "4:21"
+            },
+            {
+                "name": "THE GREATEST",
+                "duration": "4:53"
+            },
+            {
+                "name": "L'AMOUR DE MA VIE",
+                "duration": "5:33"
+            },
+            {
+                "name": "THE DINER",
+                "duration": "3:06"
+            },
+            {
+                "name": "BITTERSUITE",
+                "duration": "4:58"
+            },
+            {
+                "name": "BLUE",
+                "duration": "5:43"
+            }
         ],
-        "ratings": [2.5, 4, 1, 0.5, 3, 5, 4.5, 2, 3.5, 1.5, 2, 0, 4, 5, 3, 1, 0.5]
+        "ratings": [
+            2.5,
+            4,
+            1,
+            0.5,
+            3,
+            5,
+            4.5,
+            2,
+            3.5,
+            1.5,
+            2,
+            0,
+            4,
+            5,
+            3,
+            1,
+            0.5
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/71MnvffNWML._UF894,1000_QL80_.jpg",
         "title": "Doo-Wops & Hooligans",
         "artist": "Bruno Mars",
         "tracklist": [
-            { "name": "Grenade", "duration": "3:43" },
-            { "name": "Just the Way You Are", "duration": "3:40" },
-            { "name": "Our First Time", "duration": "4:03" },
-            { "name": "Runaway Baby", "duration": "2:28" },
-            { "name": "The Lazy Song", "duration": "3:09" },
-            { "name": "Marry You", "duration": "3:49" },
-            { "name": "Talking to the Moon", "duration": "3:38" },
-            { "name": "Liquor Store Blues", "duration": "3:49" },
-            { "name": "Count on Me", "duration": "3:17" },
-            { "name": "The Other Side", "duration": "3:48" }
+            {
+                "name": "Grenade",
+                "duration": "3:43"
+            },
+            {
+                "name": "Just the Way You Are",
+                "duration": "3:40"
+            },
+            {
+                "name": "Our First Time",
+                "duration": "4:03"
+            },
+            {
+                "name": "Runaway Baby",
+                "duration": "2:28"
+            },
+            {
+                "name": "The Lazy Song",
+                "duration": "3:09"
+            },
+            {
+                "name": "Marry You",
+                "duration": "3:49"
+            },
+            {
+                "name": "Talking to the Moon",
+                "duration": "3:38"
+            },
+            {
+                "name": "Liquor Store Blues",
+                "duration": "3:49"
+            },
+            {
+                "name": "Count on Me",
+                "duration": "3:17"
+            },
+            {
+                "name": "The Other Side",
+                "duration": "3:48"
+            }
         ],
-        "ratings": [5, 3.5, 4, 1, 0, 2.5, 4.5, 3, 2, 0.5, 5, 1.5, 3, 4, 0, 2, 1, 4.5]
+        "ratings": [
+            5,
+            3.5,
+            4,
+            1,
+            0,
+            2.5,
+            4.5,
+            3,
+            2,
+            0.5,
+            5,
+            1.5,
+            3,
+            4,
+            0,
+            2,
+            1,
+            4.5
+        ]
     },
     {
         "coverUrl": "https://i.scdn.co/image/ab67616d0000b273df174e0dcb15de7b625a7194",
         "title": "brat and it's the same but there's three more songs so it's not",
         "artist": "Charli xcx",
         "tracklist": [
-            { "name": "360", "duration": "2:13" },
-            { "name": "Club Classics", "duration": "2:33" },
-            { "name": "Sympathy Is a Knife", "duration": "2:31" },
-            { "name": "I Might Say Something Stupid", "duration": "1:49" },
-            { "name": "Talk Talk", "duration": "2:41" },
-            { "name": "Von Dutch", "duration": "2:44" },
-            { "name": "Everything Is Romantic", "duration": "3:23" },
-            { "name": "Rewind", "duration": "2:48" },
-            { "name": "So I", "duration": "3:31" },
-            { "name": "Girl, So Confusing", "duration": "2:54" },
-            { "name": "Apple", "duration": "2:31" },
-            { "name": "B2B", "duration": "2:58" },
-            { "name": "Mean Girls", "duration": "3:09" },
-            { "name": "I Think About It All the Time", "duration": "2:15" },
-            { "name": "365", "duration": "3:23" },
-            { "name": "Hello Goodbye", "duration": "3:39" },
-            { "name": "Guess", "duration": "2:22" },
-            { "name": "Spring Breakers", "duration": "2:23" }
+            {
+                "name": "360",
+                "duration": "2:13"
+            },
+            {
+                "name": "Club Classics",
+                "duration": "2:33"
+            },
+            {
+                "name": "Sympathy Is a Knife",
+                "duration": "2:31"
+            },
+            {
+                "name": "I Might Say Something Stupid",
+                "duration": "1:49"
+            },
+            {
+                "name": "Talk Talk",
+                "duration": "2:41"
+            },
+            {
+                "name": "Von Dutch",
+                "duration": "2:44"
+            },
+            {
+                "name": "Everything Is Romantic",
+                "duration": "3:23"
+            },
+            {
+                "name": "Rewind",
+                "duration": "2:48"
+            },
+            {
+                "name": "So I",
+                "duration": "3:31"
+            },
+            {
+                "name": "Girl, So Confusing",
+                "duration": "2:54"
+            },
+            {
+                "name": "Apple",
+                "duration": "2:31"
+            },
+            {
+                "name": "B2B",
+                "duration": "2:58"
+            },
+            {
+                "name": "Mean Girls",
+                "duration": "3:09"
+            },
+            {
+                "name": "I Think About It All the Time",
+                "duration": "2:15"
+            },
+            {
+                "name": "365",
+                "duration": "3:23"
+            },
+            {
+                "name": "Hello Goodbye",
+                "duration": "3:39"
+            },
+            {
+                "name": "Guess",
+                "duration": "2:22"
+            },
+            {
+                "name": "Spring Breakers",
+                "duration": "2:23"
+            }
         ],
-        "ratings": [1.5, 2, 3.5, 5, 4.5, 0.5, 1, 3, 2.5, 4, 0, 1.5, 5, 3, 4.5, 2, 0.5]
+        "ratings": [
+            1.5,
+            2,
+            3.5,
+            5,
+            4.5,
+            0.5,
+            1,
+            3,
+            2.5,
+            4,
+            0,
+            1.5,
+            5,
+            3,
+            4.5,
+            2,
+            0.5
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/81a5QE+ikIL._UF894,1000_QL80_.jpg",
         "title": "Blue Neighbourhood",
         "artist": "Troye Sivan",
         "tracklist": [
-            { "name": "WILD", "duration": "3:47" },
-            { "name": "BITE", "duration": "3:06" },
-            { "name": "FOOLS", "duration": "3:40" },
-            { "name": "EASE", "duration": "3:33" },
-            { "name": "THE QUIET", "duration": "3:46" },
-            { "name": "DKLA", "duration": "4:15" },
-            { "name": "TALK ME DOWN", "duration": "3:57" },
-            { "name": "COOL", "duration": "3:21" },
-            { "name": "HEAVEN", "duration": "4:21" },
-            { "name": "YOUTH", "duration": "3:05" },
-            { "name": "LOST BOY", "duration": "3:43" },
-            { "name": "FOR HIM.", "duration": "3:29" },
-            { "name": "SUBURBIA", "duration": "3:53" },
-            { "name": "TOO GOOD", "duration": "3:44" },
-            { "name": "BLUE", "duration": "3:31" },
-            { "name": "WILD (feat. Alessia Cara)", "duration": "3:39" },
-            { "name": "SWIMMING POOLS", "duration": "3:26" },
-            { "name": "Happy Little Pill (live version)", "duration": "4:02" }
+            {
+                "name": "WILD",
+                "duration": "3:47"
+            },
+            {
+                "name": "BITE",
+                "duration": "3:06"
+            },
+            {
+                "name": "FOOLS",
+                "duration": "3:40"
+            },
+            {
+                "name": "EASE",
+                "duration": "3:33"
+            },
+            {
+                "name": "THE QUIET",
+                "duration": "3:46"
+            },
+            {
+                "name": "DKLA",
+                "duration": "4:15"
+            },
+            {
+                "name": "TALK ME DOWN",
+                "duration": "3:57"
+            },
+            {
+                "name": "COOL",
+                "duration": "3:21"
+            },
+            {
+                "name": "HEAVEN",
+                "duration": "4:21"
+            },
+            {
+                "name": "YOUTH",
+                "duration": "3:05"
+            },
+            {
+                "name": "LOST BOY",
+                "duration": "3:43"
+            },
+            {
+                "name": "FOR HIM.",
+                "duration": "3:29"
+            },
+            {
+                "name": "SUBURBIA",
+                "duration": "3:53"
+            },
+            {
+                "name": "TOO GOOD",
+                "duration": "3:44"
+            },
+            {
+                "name": "BLUE",
+                "duration": "3:31"
+            },
+            {
+                "name": "WILD (feat. Alessia Cara)",
+                "duration": "3:39"
+            },
+            {
+                "name": "SWIMMING POOLS",
+                "duration": "3:26"
+            },
+            {
+                "name": "Happy Little Pill (live version)",
+                "duration": "4:02"
+            }
         ],
-        "ratings": [0, 5, 4, 2.5, 1.5, 3, 0.5, 4.5, 3.5, 1, 2, 5, 0, 3, 2.5, 4, 1.5, 0.5]
+        "ratings": [
+            0,
+            5,
+            4,
+            2.5,
+            1.5,
+            3,
+            0.5,
+            4.5,
+            3.5,
+            1,
+            2,
+            5,
+            0,
+            3,
+            2.5,
+            4,
+            1.5,
+            0.5
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/71VJwUwpOzL.jpg",
         "title": "Born This Way",
         "artist": "Lady Gaga",
         "tracklist": [
-            { "name": "Marry the Night", "duration": "4:25" },
-            { "name": "Born This Way", "duration": "4:20" },
-            { "name": "Government Hooker", "duration": "4:14" },
-            { "name": "Judas", "duration": "4:09" },
-            { "name": "Americano", "duration": "4:07" },
-            { "name": "Hair", "duration": "5:08" },
-            { "name": "Scheiße", "duration": "3:46" },
-            { "name": "Bloody Mary", "duration": "4:05" },
-            { "name": "Black Jesus + Amen Fashion", "duration": "3:36" },
-            { "name": "Bad Kids", "duration": "3:51" },
-            { "name": "Fashion of His Love", "duration": "3:39" },
-            { "name": "Highway Unicorn (Road to Love)", "duration": "4:16" },
-            { "name": "Heavy Metal Lover", "duration": "4:13" },
-            { "name": "Electric Chapel", "duration": "4:12" },
-            { "name": "The Queen", "duration": "5:17" },
-            { "name": "Yoü and I", "duration": "5:07" },
-            { "name": "The Edge of Glory", "duration": "5:21" }
+            {
+                "name": "Marry the Night",
+                "duration": "4:25"
+            },
+            {
+                "name": "Born This Way",
+                "duration": "4:20"
+            },
+            {
+                "name": "Government Hooker",
+                "duration": "4:14"
+            },
+            {
+                "name": "Judas",
+                "duration": "4:09"
+            },
+            {
+                "name": "Americano",
+                "duration": "4:07"
+            },
+            {
+                "name": "Hair",
+                "duration": "5:08"
+            },
+            {
+                "name": "Scheiße",
+                "duration": "3:46"
+            },
+            {
+                "name": "Bloody Mary",
+                "duration": "4:05"
+            },
+            {
+                "name": "Black Jesus + Amen Fashion",
+                "duration": "3:36"
+            },
+            {
+                "name": "Bad Kids",
+                "duration": "3:51"
+            },
+            {
+                "name": "Fashion of His Love",
+                "duration": "3:39"
+            },
+            {
+                "name": "Highway Unicorn (Road to Love)",
+                "duration": "4:16"
+            },
+            {
+                "name": "Heavy Metal Lover",
+                "duration": "4:13"
+            },
+            {
+                "name": "Electric Chapel",
+                "duration": "4:12"
+            },
+            {
+                "name": "The Queen",
+                "duration": "5:17"
+            },
+            {
+                "name": "Yoü and I",
+                "duration": "5:07"
+            },
+            {
+                "name": "The Edge of Glory",
+                "duration": "5:21"
+            }
         ],
-        "ratings": [4.5, 3, 1, 2, 5, 0, 2.5, 3.5, 4, 1.5, 0.5, 3, 5, 2, 1, 4.5, 0, 3.5]
+        "ratings": [
+            4.5,
+            3,
+            1,
+            2,
+            5,
+            0,
+            2.5,
+            3.5,
+            4,
+            1.5,
+            0.5,
+            3,
+            5,
+            2,
+            1,
+            4.5,
+            0,
+            3.5
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/81ZnVYpTdhL.jpg",
         "title": "Kids In Love",
         "artist": "Kygo",
         "tracklist": [
-            { "name": "Never Let You Go", "duration": "3:52" },
-            { "name": "Sunrise", "duration": "3:34" },
-            { "name": "Riding Shotgun", "duration": "3:18" },
-            { "name": "Stranger Things", "duration": "3:41" },
-            { "name": "With You", "duration": "3:30" },
-            { "name": "Kids in Love", "duration": "4:23" },
-            { "name": "Permanent", "duration": "3:48" },
-            { "name": "I See You", "duration": "3:48" },
-            { "name": "Stargazing", "duration": "3:45" },
-            { "name": "It Ain't Me", "duration": "3:40" },
-            { "name": "First Time", "duration": "3:14" },
-            { "name": "This Town", "duration": "3:22" },
-            { "name": "Remind Me to Forget", "duration": "3:37" }
+            {
+                "name": "Never Let You Go",
+                "duration": "3:52"
+            },
+            {
+                "name": "Sunrise",
+                "duration": "3:34"
+            },
+            {
+                "name": "Riding Shotgun",
+                "duration": "3:18"
+            },
+            {
+                "name": "Stranger Things",
+                "duration": "3:41"
+            },
+            {
+                "name": "With You",
+                "duration": "3:30"
+            },
+            {
+                "name": "Kids in Love",
+                "duration": "4:23"
+            },
+            {
+                "name": "Permanent",
+                "duration": "3:48"
+            },
+            {
+                "name": "I See You",
+                "duration": "3:48"
+            },
+            {
+                "name": "Stargazing",
+                "duration": "3:45"
+            },
+            {
+                "name": "It Ain't Me",
+                "duration": "3:40"
+            },
+            {
+                "name": "First Time",
+                "duration": "3:14"
+            },
+            {
+                "name": "This Town",
+                "duration": "3:22"
+            },
+            {
+                "name": "Remind Me to Forget",
+                "duration": "3:37"
+            }
         ],
-        "ratings": [2, 1.5, 0.5, 3, 4.5, 5, 2.5, 1, 0, 4, 3.5, 2, 1, 5, 0.5, 4, 3]
+        "ratings": [
+            2,
+            1.5,
+            0.5,
+            3,
+            4.5,
+            5,
+            2.5,
+            1,
+            0,
+            4,
+            3.5,
+            2,
+            1,
+            5,
+            0.5,
+            4,
+            3
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/71MRKrpsukL._UF894,1000_QL80_.jpg",
         "title": "BLURRYFACE",
         "artist": "twenty one pilots",
         "tracklist": [
-            { "name": "Heavydirtysoul", "duration": "3:55" },
-            { "name": "Stressed Out", "duration": "3:22" },
-            { "name": "Ride", "duration": "3:35" },
-            { "name": "Fairly Local", "duration": "3:27" },
-            { "name": "Tear in My Heart", "duration": "3:08" },
-            { "name": "Lane Boy", "duration": "4:13" },
-            { "name": "The Judge", "duration": "4:58" },
-            { "name": "Doubt", "duration": "3:11" },
-            { "name": "Polarize", "duration": "3:47" },
-            { "name": "We Don't Believe What's on TV", "duration": "2:57" },
-            { "name": "Message Man", "duration": "4:00" },
-            { "name": "Hometown", "duration": "3:55" },
-            { "name": "Not Today", "duration": "3:58" },
-            { "name": "Goner", "duration": "3:57" },
-            { "name": "Heathens", "duration": "3:15" }
+            {
+                "name": "Heavydirtysoul",
+                "duration": "3:55"
+            },
+            {
+                "name": "Stressed Out",
+                "duration": "3:22"
+            },
+            {
+                "name": "Ride",
+                "duration": "3:35"
+            },
+            {
+                "name": "Fairly Local",
+                "duration": "3:27"
+            },
+            {
+                "name": "Tear in My Heart",
+                "duration": "3:08"
+            },
+            {
+                "name": "Lane Boy",
+                "duration": "4:13"
+            },
+            {
+                "name": "The Judge",
+                "duration": "4:58"
+            },
+            {
+                "name": "Doubt",
+                "duration": "3:11"
+            },
+            {
+                "name": "Polarize",
+                "duration": "3:47"
+            },
+            {
+                "name": "We Don't Believe What's on TV",
+                "duration": "2:57"
+            },
+            {
+                "name": "Message Man",
+                "duration": "4:00"
+            },
+            {
+                "name": "Hometown",
+                "duration": "3:55"
+            },
+            {
+                "name": "Not Today",
+                "duration": "3:58"
+            },
+            {
+                "name": "Goner",
+                "duration": "3:57"
+            },
+            {
+                "name": "Heathens",
+                "duration": "3:15"
+            }
         ],
-        "ratings": [0, 3.5, 4, 1, 2.5, 5, 0.5, 2, 4.5, 3, 1.5, 0, 5, 4, 2, 3, 1, 0.5]
+        "ratings": [
+            0,
+            3.5,
+            4,
+            1,
+            2.5,
+            5,
+            0.5,
+            2,
+            4.5,
+            3,
+            1.5,
+            0,
+            5,
+            4,
+            2,
+            3,
+            1,
+            0.5
+        ]
     },
     {
         "coverUrl": "https://m.media-amazon.com/images/I/71NEqnKS2dL._UF894,1000_QL80_.jpg",
         "title": "After Laughter",
         "artist": "Paramore",
         "tracklist": [
-            { "name": "Hard Times", "duration": "3:02" },
-            { "name": "Rose-Colored Boy", "duration": "3:32" },
-            { "name": "Told You So", "duration": "3:08" },
-            { "name": "Forgiveness", "duration": "3:40" },
-            { "name": "Fake Happy", "duration": "3:55" },
-            { "name": "26", "duration": "3:40" },
-            { "name": "Pool", "duration": "3:52" },
-            { "name": "Grudges", "duration": "3:06" },
-            { "name": "Caught in the Middle", "duration": "3:34" },
-            { "name": "Idle Worship", "duration": "3:18" },
-            { "name": "No Friend", "duration": "3:24" },
-            { "name": "Tell Me How", "duration": "4:20" }
+            {
+                "name": "Hard Times",
+                "duration": "3:02"
+            },
+            {
+                "name": "Rose-Colored Boy",
+                "duration": "3:32"
+            },
+            {
+                "name": "Told You So",
+                "duration": "3:08"
+            },
+            {
+                "name": "Forgiveness",
+                "duration": "3:40"
+            },
+            {
+                "name": "Fake Happy",
+                "duration": "3:55"
+            },
+            {
+                "name": "26",
+                "duration": "3:40"
+            },
+            {
+                "name": "Pool",
+                "duration": "3:52"
+            },
+            {
+                "name": "Grudges",
+                "duration": "3:06"
+            },
+            {
+                "name": "Caught in the Middle",
+                "duration": "3:34"
+            },
+            {
+                "name": "Idle Worship",
+                "duration": "3:18"
+            },
+            {
+                "name": "No Friend",
+                "duration": "3:24"
+            },
+            {
+                "name": "Tell Me How",
+                "duration": "4:20"
+            }
         ],
-        "ratings": [3, 2.5, 5, 0, 1.5, 4, 0.5, 2, 3.5, 1, 4.5, 3, 0, 2.5, 5, 1.5, 4, 0.5]
-    }
+        "ratings": [
+            3,
+            2.5,
+            5,
+            0,
+            1.5,
+            4,
+            0.5,
+            2,
+            3.5,
+            1,
+            4.5,
+            3,
+            0,
+            2.5,
+            5,
+            1.5,
+            4,
+            0.5
+        ]
+    },
+    null,
+    null
 ]

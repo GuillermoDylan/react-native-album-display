@@ -1,41 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Animated, StyleSheet, TouchableOpacity } from 'react-native';
+import FadeInView from './animations/FadeInView';
 
-const FadeInView = (props) => {
-    const fadeAnim = new Animated.Value(0); // Initial value for opacity: 0
-
-    useEffect(() => {
-        const fadeIn = () => {
-            Animated.timing(fadeAnim, {
-                toValue: 1,
-                duration: 1000,
-                useNativeDriver: true,
-            }).start(() => fadeOut());
-        };
-
-        const fadeOut = () => {
-            Animated.timing(fadeAnim, {
-                toValue: 0.5,
-                duration: 1000,
-                useNativeDriver: true,
-            }).start(() => fadeIn());
-        };
-
-        fadeIn();
-    }, [fadeAnim]);
-
-    return (
-        <Animated.View // Special animatable View
-            style={{
-                ...props.style,
-                opacity: fadeAnim, // Bind opacity to animated value
-            }}>
-            {props.children}
-        </Animated.View>
-    );
-};
-
-const CoverComponent = ({ imageUrl, onPress }) => {
+const CoverComponent = ({ album, onPress }) => {
     const [scaleAnim] = useState(new Animated.Value(1));
 
     const handlePressIn = () => {
@@ -60,18 +27,17 @@ const CoverComponent = ({ imageUrl, onPress }) => {
             onPressOut={handlePressOut}
             onMouseEnter={handlePressIn}
             onMouseLeave={handlePressOut}
-            disabled={!imageUrl}
+            disabled={!album?.coverUrl}
         >
-            {imageUrl ? (
+            {album?.coverUrl ? (
                 <Animated.Image
-                    source={{ uri: imageUrl }}
+                    source={{ uri: album.coverUrl }}
                     style={[styles.image, { transform: [{ scale: scaleAnim }] }]}
                     resizeMode="cover"
                 />
             ) : (
                 <FadeInView>
                     <Animated.Image
-                        source={{ uri: imageUrl }}
                         style={[styles.image, { transform: [{ scale: scaleAnim }] }]}
                         resizeMode="cover"
                     />
