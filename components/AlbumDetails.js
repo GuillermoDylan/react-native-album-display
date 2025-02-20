@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, Animated, FlatList } from 'react-native';
 import { Divider } from '@rneui/themed';
-import StarRating from 'react-native-star-rating-widget';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
 import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
 import RatesStatistics from './albumDetailsSubcomponents/RatesStatistics';
@@ -11,15 +10,11 @@ const { width, height } = Dimensions.get('window');
 const AlbumDetails = ({ album }) => {
   
   const scrollY = useMemo(() => new Animated.Value(0), []);
-  const [ratings, setRatings] = useState([5, 4.5, 3, 4, 2.5, 5, 4, 3.5, 4.5, 2, 1, 3, 5, 4.5, 4, 0.5]);
+  const [ratings, setRatings] = useState(album.ratings || []);
 
-  const sampleTracks = [
-    { name: "Track One", duration: "3:45" },
-    { name: "Track Two", duration: "4:12" },
-    { name: "Track Three", duration: "2:58" },
-    { name: "Track Four", duration: "5:03" },
-    { name: "Track Five", duration: "3:30" },
-  ];
+  useEffect(() => {
+    setRatings(album.ratings || []); // Reinicia las calificaciones cuando cambia el álbum
+  }, [album]);
 
   const initialTopContainerHeight = height * 0.4;
   const compressedTopContainerHeight = height * 0.1;
@@ -60,7 +55,7 @@ const AlbumDetails = ({ album }) => {
             <Divider style={{ marginVertical: 10 }} />
             <RatesStatistics ratings={ratings} setRatings={setRatings} />
             <Divider style={{ marginVertical: 10 }} />
-            <AlbumTracklist tracks={sampleTracks} />
+            <AlbumTracklist tracks={album.tracklist} />
           </View>
         )}
         keyExtractor={(item, index) => index.toString()}

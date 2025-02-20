@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { View, Text, StyleSheet, PanResponder, Animated, Button } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
 import { Dimensions } from 'react-native';
@@ -12,6 +12,13 @@ const RatingHistogram = ({ ratings, setRatings }) => {
     const ratingCounts = Array(11).fill(0);
     let totalRatings = 0;
     let sumRatings = 0;
+
+    useEffect(() => {
+        const totalRatings = ratings.length;
+        const sumRatings = ratings.reduce((sum, rating) => sum + rating, 0);
+        setDisplayValue(totalRatings > 0 ? (sumRatings / totalRatings).toFixed(2) : 'N/A');
+    }, [ratings]);
+    
 
     ratings.forEach(rating => {
         const index = Math.round(rating * 2);
@@ -65,25 +72,43 @@ const RatingHistogram = ({ ratings, setRatings }) => {
     };
 
     const handleRatingChange = (newRating) => {
-        setRatings(prevRatings => {
-            const filteredRatings = userRating !== null
-                ? prevRatings.filter((_, index) => index !== prevRatings.lastIndexOf(userRating))
-                : prevRatings;
-
-            const updatedRatings = [...filteredRatings, newRating];
-            setUserRating(newRating);
-            updateAverageRating(updatedRatings);
-            return updatedRatings;
-        });
+        setUserRating(newRating); 
         animateRating();
+    
+        setTimeout(() => {
+            setRatings(prevRatings => {
+                const filteredRatings = userRating !== null
+                    ? prevRatings.filter((_, index) => index !== prevRatings.lastIndexOf(userRating))
+                    : prevRatings;
+    
+                const updatedRatings = [...filteredRatings, newRating];
+                updateAverageRating(updatedRatings);
+                return updatedRatings;
+            });
+        }, 0);
     };
+    
+    
+    const handleRemoveRating = () => {
+        if (userRating !== null) {
+            setUserRating(null);
+    
+            setTimeout(() => {
+                setRatings(prevRatings => {
+                    const filteredRatings = prevRatings.filter((_, index) => index !== prevRatings.lastIndexOf(userRating));
+                    updateAverageRating(filteredRatings);
+                    return filteredRatings;
+                });
+            }, 0);
+        }
+    };
+    
 
     const updateAverageRating = (updatedRatings) => {
         const totalRatings = updatedRatings.length;
         const sumRatings = updatedRatings.reduce((sum, rating) => sum + rating, 0);
         setDisplayValue(totalRatings > 0 ? (sumRatings / totalRatings).toFixed(2) : 'N/A');
     };
-
 
     return (
         <View style={styles.container}>
@@ -97,6 +122,9 @@ const RatingHistogram = ({ ratings, setRatings }) => {
                     <Text style={styles.userRatingValueNum}>{userRating || '-'}</Text>
                 </Animated.View>
             </View>
+            {userRating !== null && (
+                <Button title="Eliminar rating" onPress={handleRemoveRating} />
+            )}
             <View {...panResponder.panHandlers}>
                 <BarChart
                     data={data}
