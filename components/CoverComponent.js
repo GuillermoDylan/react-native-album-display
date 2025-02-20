@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Animated, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Animated, StyleSheet, TouchableOpacity } from 'react-native';
 
 const FadeInView = (props) => {
     const fadeAnim = new Animated.Value(0); // Initial value for opacity: 0

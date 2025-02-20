@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, SafeAreaView, Platform, StatusBar, ScrollView } from 'react-native';
+import { View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import CoverComponent from './CoverComponent';
 
 const styles = StyleSheet.create({
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const CoverGroup = ({ items, isListView }) => {
+const CoverGroup = ({ albums, isListView }) => {
 
     return (
         <SafeAreaView style={[styles.container, isListView ? styles.scrollViewList : styles.scrollView]}>
@@ -24,9 +24,9 @@ const CoverGroup = ({ items, isListView }) => {
                 contentContainerStyle={isListView ? null : styles.scrollView}
                 horizontal={isListView}
             >
-                {items.map((item, index) => (
+                {albums.map((album, index) => (
                     <View key={index}>
-                        <CoverComponent imageUrl={item.imageUrl} onPress={item.onPress} key={index} />
+                        <CoverComponent imageUrl={album.coverUrl} onPress={album.onPress} key={index} />
                     </View>
                 ))}
             </ScrollView>
