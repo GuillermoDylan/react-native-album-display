@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'left',
     flex: 1,
+    color: '#e3f2fd'
   },
   trackItem: {
     flexDirection: 'row',
@@ -64,17 +65,20 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+    color: '#e3f2fd'
   },
   trackNumber: {
     width: 40,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#e3f2fd'
   },
   trackName: {
     flex: 2,
     fontSize: 16,
     textAlign: 'left',
+    color: '#e3f2fd'
   },
   trackDuration: {
     width: 60,

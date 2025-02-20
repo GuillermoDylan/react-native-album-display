@@ -20,8 +20,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Covers</Text>
-      <CoverGroup items={items} isListView={false} />
+      <AlbumDetails album={{ coverUrl: 'https://m.media-amazon.com/images/I/91VnI1TRpxL.jpg', title: 'Thriller', artist: 'Michael Jackson' }} />
     </View>
   );
 }

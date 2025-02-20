@@ -78,18 +78,6 @@ const RatingHistogram = ({ ratings, setRatings }) => {
         animateRating();
     };
 
-    const handleRemoveRating = () => {
-        if (userRating !== null) {
-            setRatings(prevRatings => {
-                const filteredRatings = prevRatings.filter((_, index) => index !== prevRatings.lastIndexOf(userRating));
-                updateAverageRating(filteredRatings);
-                return filteredRatings;
-            });
-            setUserRating(null);
-        }
-    };
-
-    // Función para calcular y actualizar la media
     const updateAverageRating = (updatedRatings) => {
         const totalRatings = updatedRatings.length;
         const sumRatings = updatedRatings.reduce((sum, rating) => sum + rating, 0);
@@ -109,9 +97,6 @@ const RatingHistogram = ({ ratings, setRatings }) => {
                     <Text style={styles.userRatingValueNum}>{userRating || '-'}</Text>
                 </Animated.View>
             </View>
-            {userRating !== null && (
-                <Button title="Eliminar rating" onPress={handleRemoveRating} />
-            )}
             <View {...panResponder.panHandlers}>
                 <BarChart
                     data={data}
@@ -139,8 +124,8 @@ const RatingHistogram = ({ ratings, setRatings }) => {
 };
 
 const chartConfig = {
-    backgroundGradientFrom: '#fff',
-    backgroundGradientTo: '#fff',
+    backgroundGradientFrom: '#1c1c1c',
+    backgroundGradientTo: '#1c1c1c',
     color: (opacity = 1) => `rgba(0, 122, 255, ${opacity})`,
     barPercentage: 0.5,
 };
@@ -159,7 +144,7 @@ const styles = StyleSheet.create({
     userRatingValueWrapper: {
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "yellow",
+        backgroundColor: "#fdd835",
         width: 50,
         height: 50,
         borderRadius: 25,
@@ -177,7 +162,8 @@ const styles = StyleSheet.create({
     },
     averageRating: {
         fontSize: 26,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#e3f2fd',
     },
 });
 
