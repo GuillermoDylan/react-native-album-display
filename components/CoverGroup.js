@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
 const CoverGroup = ({ items, isListView }) => {
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView 
-                contentContainerStyle={isListView ? styles.scrollViewList : styles.scrollView} 
+        <SafeAreaView style={[styles.container, isListView ? styles.scrollViewList : styles.scrollView]}>
+            <ScrollView
+                contentContainerStyle={isListView ? null : styles.scrollView}
                 horizontal={isListView}
             >
                 {items.map((item, index) => (

@@ -7,14 +7,21 @@ import CoverGroup from './components/CoverGroup';
 import AlbumDetails from './components/AlbumDetails';
 
 export default function App() {
-  const items = Array.from({ length: 10 }, (_, index) => ({
-    imageUrl: "https://placehold.co/400x400.png",
-    onPress: () => {},
+  const covers = ["https://cdn-images.dzcdn.net/images/cover/ba6a493f64b09765e7786b358bc3fd3f/0x1900-000000-80-0-0.jpg",
+    "https://cdn-images.dzcdn.net/images/cover/df3dc0be9072fe94a7729e0fa39d59dd/0x1900-000000-80-0-0.jpg",
+    "https://www.udiscovermusic.com/wp-content/uploads/2013/04/ten-summoners-tales.jpg",
+    "https://m.media-amazon.com/images/I/713rQXjrBtL._UF894,1000_QL80_.jpg",
+    null
+  ]
+  const items = covers.map((cover) => ({
+    imageUrl: cover,
+    onPress: () => { },
   }));
 
   return (
     <View style={styles.container}>
-      <AlbumDetails album={{ coverUrl: 'https://m.media-amazon.com/images/I/91VnI1TRpxL.jpg', title: 'Thriller', artist: 'Michael Jackson' }} />
+      <Text>Covers</Text>
+      <CoverGroup items={items} isListView={false} />
     </View>
   );
 }
@@ -22,7 +29,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
