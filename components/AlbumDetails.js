@@ -1,32 +1,84 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import React, { useState, useEffect, useMemo } from 'react';
+import { View, Text, Image, StyleSheet, Dimensions, Animated } from 'react-native';
+import { Divider } from '@rneui/themed';
+import StarRating from 'react-native-star-rating-widget';
 import AlbumBasicData from './albumDetailsSubcomponents/AlbumBasicData';
+import AlbumTracklist from './albumDetailsSubcomponents/AlbumTracklist';
+import RatesStatistics from './albumDetailsSubcomponents/RatesStatistics';
 
 const { width, height } = Dimensions.get('window');
 
-const imgMaxSize = 190;
-
 const AlbumDetails = ({ album }) => {
-  const [imageStyle, setImageStyle] = useState({ width: '100%', height: imgMaxSize });
+  const [rating, setRating] = useState(0);
+  const scaleAnim = useMemo(() => new Animated.Value(1), []);
 
-  useEffect(() => {
-    Image.getSize(album.coverUrl, (imgWidth, imgHeight) => {
-      if (imgHeight > imgWidth) {
-        setImageStyle({ width: imgMaxSize, height: '100%' });
-      } else {
-        setImageStyle({ width: '100%', height: imgMaxSize });
-      }
-    });
-  }, [album.coverUrl]);
+  const animateRating = () => {
+    Animated.sequence([
+      Animated.timing(scaleAnim, {
+        toValue: 1.2,
+        duration: 150,
+        useNativeDriver: true,
+      }),
+      Animated.timing(scaleAnim, {
+        toValue: 1,
+        duration: 150,
+        useNativeDriver: true,
+      })
+    ]).start();
+  };
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+    animateRating();
+  };
+
+  const sampleTracks = [
+    { name: "Track One", duration: "3:45" },
+    { name: "Track Two", duration: "4:12" },
+    { name: "Track Three", duration: "2:58" },
+    { name: "Track Four", duration: "5:03" },
+    { name: "Track Five", duration: "3:30" },
+    { name: "Track One", duration: "3:45" },
+    { name: "Track Two", duration: "4:12" },
+    { name: "Track Three", duration: "2:58" },
+    { name: "Track Four", duration: "5:03" },
+    { name: "Track Five", duration: "3:30" },
+    { name: "Track One", duration: "3:45" },
+    { name: "Track Two", duration: "4:12" },
+    { name: "Track Three", duration: "2:58" },
+    { name: "Track Four", duration: "5:03" },
+    { name: "Track Five", duration: "3:30" },
+    { name: "Track One", duration: "3:45" },
+    { name: "Track Two", duration: "4:12" },
+    { name: "Track Three", duration: "2:58" },
+    { name: "Track Four", duration: "5:03" },
+    { name: "Track Five", duration: "3:30" },
+  ];
+  
+  const ratingsData = [5, 4.5, 3, 4, 2.5, 5, 4, 3.5, 4.5, 2, 1, 3, 5, 4.5, 4, 0.5];
 
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <View style={styles.imageWrapper}>
-          <Image source={{ uri: album.coverUrl }} style={[styles.cover, imageStyle]} />
+          <Image source={{ uri: album.coverUrl }} style={styles.cover} />
         </View>
         <AlbumBasicData style={styles.textContainer} album={album} />
       </View>
+      <Divider style={{marginVertical: 10}}/>
+      <View style={styles.ratingContainer}>
+        <StarRating
+          rating={rating}
+          onChange={handleRatingChange}
+          starSize={45}
+        />
+        <Animated.View style={[styles.ratingValueWrapper, { transform: [{ scale: scaleAnim }] }]}> 
+          <Text style={styles.ratingValueNum}>{rating}</Text>
+        </Animated.View>
+      </View>
+      <RatesStatistics ratings={ratingsData} />
+      <Divider style={{marginVertical: 10}}/>
+      <AlbumTracklist tracks={sampleTracks}/>
     </View>
   );
 };
@@ -37,29 +89,44 @@ const styles = StyleSheet.create({
     padding: 10,
     width: '100%',
     borderRadius: 10,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 3,
   },
   topContainer: {
     flexDirection: 'row',
-    height: imgMaxSize,
-    backgroundColor: "orange"
+    backgroundColor: 'orange',
+    alignSelf: 'flex-start'
   },
   imageWrapper: {
-    width: 190,
-    height: '100%',
+    flex: 1.5,
+    padding: 10,
+    backgroundColor: 'blue',
     justifyContent: 'flex-end',
   },
   cover: {
+    width: '100%',
+    aspectRatio: 1,
     resizeMode: 'contain',
-    alignSelf: 'flex-end',
+    backgroundColor: "red"
   },
   textContainer: {
     flex: 1,
-    marginLeft: 10,
   },
+  ratingContainer: {
+    flexDirection: 'row',
+    justifyContent: "space-evenly",
+    alignItems: "center"
+  },
+  ratingValueWrapper: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "yellow",
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+  },
+  ratingValueNum: {
+    fontSize: 21,
+    fontWeight: "bold",
+  }
 });
 
 export default AlbumDetails;
